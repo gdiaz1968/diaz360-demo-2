@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 const productRoutes = require('./routes/productRoutes');
 const purchaseRoutes = require('./routes/purchaseRoutes');
 const saleRoutes = require('./routes/saleRoutes');
+const stockRoutes = require('./routes/stockRoutes'); // NUEVO: ruta de stock
 
 dotenv.config();
 connectDB();
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/purchases', purchaseRoutes);
 app.use('/api/sales', saleRoutes);
+app.use('/api', stockRoutes); // Añadir la ruta de stock
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

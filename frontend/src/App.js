@@ -8,6 +8,7 @@ import Compras from './pages/compras';
 import Ventas from './pages/ventas';
 import Reportes from './pages/reportes';
 
+
 function App() {
   return (
     <Router>
@@ -19,7 +20,7 @@ function App() {
             <Route path="/productos" element={<Productos />} />
             <Route path="/compras" element={<Compras />} />
             <Route path="/ventas" element={<Ventas />} />
-            <Route path="/reportes" element={<Reportes />} />
+            <Route path="/reportes" element={<StockReportePDF />} /> {/* Correcta adición de ruta */}
           </Routes>
         </div>
       </div>
